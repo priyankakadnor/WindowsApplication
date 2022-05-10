@@ -202,7 +202,7 @@ namespace WindowsApplication
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "BATCHINFORMATION";
-            this.Text = "BATCH INFORMATIOn";
+            this.Text = "BATCH INFORMATION";
             this.ResumeLayout(false);
             this.PerformLayout();
 

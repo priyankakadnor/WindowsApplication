@@ -11,7 +11,7 @@ using System.IO;
 using System.Xml.Serialization;
 using System.Text.Json;
 using System.Runtime.Serialization.Formatters.Binary;
-
+using System.Runtime.Serialization.Formatters.Soap;
 
 namespace WindowsApplication
 {
@@ -65,7 +65,7 @@ namespace WindowsApplication
                 // dept details accepting from the textboxes & storing in the object
                 Department dept = new Department();
                 // default file extension is .dat file (data file) / binary file
-                fs = new FileStream(@"D:\TestFolder1\DeptXml", FileMode.Open, FileAccess.Read);
+                fs = new FileStream(@"F:\TestFolder1\DeptXml", FileMode.Open, FileAccess.Read);
                 XmlSerializer xml = new XmlSerializer(typeof(Department));
                 dept = (Department)xml.Deserialize(fs);
                 txtid.Text = dept.id.ToString();
@@ -91,7 +91,7 @@ namespace WindowsApplication
                 // dept details accepting from the textboxes & storing in the object
                 Department dept = new Department();
                 // default file extension is .dat file (data file) / binary file
-                fs = new FileStream(@"D:\TestFolder1\Dept", FileMode.Open, FileAccess.Read);
+                fs = new FileStream(@"F:\TestFolder1\Dept", FileMode.Open, FileAccess.Read);
                 BinaryFormatter binary = new BinaryFormatter();
                 dept = (Department)binary.Deserialize(fs);
                 txtid.Text = dept.id.ToString();
@@ -120,7 +120,7 @@ namespace WindowsApplication
                 dept.name = txtname.Text;
                 dept.location = Location.Text;
 
-                fs = new FileStream(@"D:\TestFolder1\Dept", FileMode.Open, FileAccess.Read);
+                fs = new FileStream(@"F:\TestFolder1\Dept", FileMode.Open, FileAccess.Read);
                 BinaryFormatter binary = new BinaryFormatter();
                 dept = (Department)binary.Deserialize(fs);
                 txtid.Text = dept.id.ToString();
@@ -146,7 +146,7 @@ namespace WindowsApplication
                 dept.name = txtname.Text;
                 dept.location = Location.Text;
 
-                fs = new FileStream(@"D:\TestFolder1\DeptJson", FileMode.Open, FileAccess.Read);
+                fs = new FileStream(@"F:\TestFolder1\DeptJson", FileMode.Open, FileAccess.Read);
                 JsonSerializer.Serialize(fs, dept);
 
 
@@ -170,7 +170,7 @@ namespace WindowsApplication
                 dept.name = txtname.Text;
                 dept.location = Location.Text;
 
-                fs = new FileStream(@"D:\TestFolder1\DeptJson", FileMode.Open, FileAccess.Read);
+                fs = new FileStream(@"F:\TestFolder1\DeptJson", FileMode.Open, FileAccess.Read);
                 JsonSerializer.Deserialize<Department>(fs);
 
 
@@ -240,6 +240,56 @@ namespace WindowsApplication
         }
 
         private void Form3_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSoapwrite_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Department dept = new Department();
+                dept.id = Convert.ToInt32(txtid.Text);
+                dept.name = txtname.Text;
+                dept.location = txtlocation.Text;
+                fs = new FileStream(@"F:\DemoFolder\Deptsoap", FileMode.Create, FileAccess.Write);
+                SoapFormatter so = new SoapFormatter();
+                so.Serialize(fs, dept);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                fs.Close();
+            }
+        }
+
+        private void btnsoapread_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Department dept = new Department();
+                fs = new FileStream(@"F:\TestFolder1\Deptsoap", FileMode.Open, FileAccess.Read);
+                SoapFormatter so = new SoapFormatter();
+                dept = (Department)so.Deserialize(fs);
+                txtid.Text = dept.id.ToString();
+                txtname.Text = dept.name;
+                txtlocation.Text = dept.location;
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                fs.Close();
+            }
+        }
+
+        private void filebtn_Click(object sender, EventArgs e)
         {
 
         }

@@ -29,61 +29,61 @@ namespace WindowsApplication
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.bookid = new System.Windows.Forms.Label();
+            this.bookname = new System.Windows.Forms.Label();
+            this.authorname = new System.Windows.Forms.Label();
+            this.price = new System.Windows.Forms.Label();
             this.txtid = new System.Windows.Forms.TextBox();
             this.txtbook = new System.Windows.Forms.TextBox();
             this.txtauthornm = new System.Windows.Forms.TextBox();
             this.txtprice = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
+            this.btnWrite = new System.Windows.Forms.Button();
+            this.btnread = new System.Windows.Forms.Button();
+            this.btnbinaryread = new System.Windows.Forms.Button();
+            this.btnbinarywrite = new System.Windows.Forms.Button();
+            this.btnXmlwrite = new System.Windows.Forms.Button();
+            this.btnXmlread = new System.Windows.Forms.Button();
+            this.btnSoapWrite = new System.Windows.Forms.Button();
+            this.btnSoapead = new System.Windows.Forms.Button();
+            this.btnjsonwrite = new System.Windows.Forms.Button();
+            this.btnjsonread = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // label1
+            // bookid
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(208, 33);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(44, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Book Id";
+            this.bookid.AutoSize = true;
+            this.bookid.Location = new System.Drawing.Point(208, 33);
+            this.bookid.Name = "bookid";
+            this.bookid.Size = new System.Drawing.Size(44, 13);
+            this.bookid.TabIndex = 0;
+            this.bookid.Text = "Book Id";
             // 
-            // label2
+            // bookname
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(208, 93);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(63, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Book Name";
+            this.bookname.AutoSize = true;
+            this.bookname.Location = new System.Drawing.Point(208, 93);
+            this.bookname.Name = "bookname";
+            this.bookname.Size = new System.Drawing.Size(63, 13);
+            this.bookname.TabIndex = 1;
+            this.bookname.Text = "Book Name";
             // 
-            // label3
+            // authorname
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(208, 149);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(69, 13);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Author Name";
+            this.authorname.AutoSize = true;
+            this.authorname.Location = new System.Drawing.Point(208, 149);
+            this.authorname.Name = "authorname";
+            this.authorname.Size = new System.Drawing.Size(69, 13);
+            this.authorname.TabIndex = 2;
+            this.authorname.Text = "Author Name";
             // 
-            // label4
+            // price
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(208, 211);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(31, 13);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Price";
+            this.price.AutoSize = true;
+            this.price.Location = new System.Drawing.Point(208, 211);
+            this.price.Name = "price";
+            this.price.Size = new System.Drawing.Size(31, 13);
+            this.price.TabIndex = 3;
+            this.price.Text = "Price";
             // 
             // txtid
             // 
@@ -113,119 +113,125 @@ namespace WindowsApplication
             this.txtprice.Size = new System.Drawing.Size(100, 20);
             this.txtprice.TabIndex = 7;
             // 
-            // button1
+            // btnWrite
             // 
-            this.button1.Location = new System.Drawing.Point(220, 287);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "Write Form";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnWrite.Location = new System.Drawing.Point(220, 287);
+            this.btnWrite.Name = "btnWrite";
+            this.btnWrite.Size = new System.Drawing.Size(75, 23);
+            this.btnWrite.TabIndex = 8;
+            this.btnWrite.Text = "Write Form";
+            this.btnWrite.UseVisualStyleBackColor = true;
+            this.btnWrite.Click += new System.EventHandler(this.btnWrite_Click);
             // 
-            // button2
+            // btnread
             // 
-            this.button2.Location = new System.Drawing.Point(336, 287);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 9;
-            this.button2.Text = "Read Form";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnread.Location = new System.Drawing.Point(336, 287);
+            this.btnread.Name = "btnread";
+            this.btnread.Size = new System.Drawing.Size(75, 23);
+            this.btnread.TabIndex = 9;
+            this.btnread.Text = "Read Form";
+            this.btnread.UseVisualStyleBackColor = true;
+            this.btnread.Click += new System.EventHandler(this.btnread_Click);
             // 
-            // button3
+            // btnbinaryread
             // 
-            this.button3.Location = new System.Drawing.Point(336, 342);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 10;
-            this.button3.Text = "Binary Read";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnbinaryread.Location = new System.Drawing.Point(336, 342);
+            this.btnbinaryread.Name = "btnbinaryread";
+            this.btnbinaryread.Size = new System.Drawing.Size(75, 23);
+            this.btnbinaryread.TabIndex = 10;
+            this.btnbinaryread.Text = "Binary Read";
+            this.btnbinaryread.UseVisualStyleBackColor = true;
+            this.btnbinaryread.Click += new System.EventHandler(this.btnbinaryread_Click);
             // 
-            // button4
+            // btnbinarywrite
             // 
-            this.button4.Location = new System.Drawing.Point(220, 342);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 11;
-            this.button4.Text = "Binary Write";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnbinarywrite.Location = new System.Drawing.Point(220, 342);
+            this.btnbinarywrite.Name = "btnbinarywrite";
+            this.btnbinarywrite.Size = new System.Drawing.Size(75, 23);
+            this.btnbinarywrite.TabIndex = 11;
+            this.btnbinarywrite.Text = "Binary Write";
+            this.btnbinarywrite.UseVisualStyleBackColor = true;
+            this.btnbinarywrite.Click += new System.EventHandler(this.btnbinarywrite_Click);
             // 
-            // button5
+            // btnXmlwrite
             // 
-            this.button5.Location = new System.Drawing.Point(424, 49);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 23);
-            this.button5.TabIndex = 12;
-            this.button5.Text = "Xml Write";
-            this.button5.UseVisualStyleBackColor = true;
+            this.btnXmlwrite.Location = new System.Drawing.Point(424, 49);
+            this.btnXmlwrite.Name = "btnXmlwrite";
+            this.btnXmlwrite.Size = new System.Drawing.Size(75, 23);
+            this.btnXmlwrite.TabIndex = 12;
+            this.btnXmlwrite.Text = "Xml Write";
+            this.btnXmlwrite.UseVisualStyleBackColor = true;
+            this.btnXmlwrite.Click += new System.EventHandler(this.btnXmlwrite_Click);
             // 
-            // button6
+            // btnXmlread
             // 
-            this.button6.Location = new System.Drawing.Point(549, 49);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(75, 23);
-            this.button6.TabIndex = 13;
-            this.button6.Text = "Xml Read";
-            this.button6.UseVisualStyleBackColor = true;
+            this.btnXmlread.Location = new System.Drawing.Point(549, 49);
+            this.btnXmlread.Name = "btnXmlread";
+            this.btnXmlread.Size = new System.Drawing.Size(75, 23);
+            this.btnXmlread.TabIndex = 13;
+            this.btnXmlread.Text = "Xml Read";
+            this.btnXmlread.UseVisualStyleBackColor = true;
             // 
-            // button7
+            // btnSoapWrite
             // 
-            this.button7.Location = new System.Drawing.Point(424, 126);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(75, 23);
-            this.button7.TabIndex = 14;
-            this.button7.Text = "Soap Write";
-            this.button7.UseVisualStyleBackColor = true;
+            this.btnSoapWrite.Location = new System.Drawing.Point(424, 126);
+            this.btnSoapWrite.Name = "btnSoapWrite";
+            this.btnSoapWrite.Size = new System.Drawing.Size(75, 23);
+            this.btnSoapWrite.TabIndex = 14;
+            this.btnSoapWrite.Text = "Soap Write";
+            this.btnSoapWrite.UseVisualStyleBackColor = true;
             // 
-            // button8
+            // btnSoapead
             // 
-            this.button8.Location = new System.Drawing.Point(541, 126);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(75, 23);
-            this.button8.TabIndex = 15;
-            this.button8.Text = "Soap Read";
-            this.button8.UseVisualStyleBackColor = true;
+            this.btnSoapead.Location = new System.Drawing.Point(541, 126);
+            this.btnSoapead.Name = "btnSoapead";
+            this.btnSoapead.Size = new System.Drawing.Size(75, 23);
+            this.btnSoapead.TabIndex = 15;
+            this.btnSoapead.Text = "Soap Read";
+            this.btnSoapead.UseVisualStyleBackColor = true;
             // 
-            // button9
+            // btnjsonwrite
             // 
-            this.button9.Location = new System.Drawing.Point(424, 206);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(75, 23);
-            this.button9.TabIndex = 16;
-            this.button9.Text = "Json Write";
-            this.button9.UseVisualStyleBackColor = true;
+            this.btnjsonwrite.Location = new System.Drawing.Point(424, 206);
+            this.btnjsonwrite.Name = "btnjsonwrite";
+            this.btnjsonwrite.Size = new System.Drawing.Size(75, 23);
+            this.btnjsonwrite.TabIndex = 16;
+            this.btnjsonwrite.Text = "Json Write";
+            this.btnjsonwrite.UseVisualStyleBackColor = true;
+            this.btnjsonwrite.Click += new System.EventHandler(this.btnjsonwrite_Click);
             // 
-            // button10
+            // btnjsonread
             // 
-            this.button10.Location = new System.Drawing.Point(549, 208);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(75, 23);
-            this.button10.TabIndex = 17;
-            this.button10.Text = "Json Read";
-            this.button10.UseVisualStyleBackColor = true;
+            this.btnjsonread.Location = new System.Drawing.Point(549, 208);
+            this.btnjsonread.Name = "btnjsonread";
+            this.btnjsonread.Size = new System.Drawing.Size(75, 23);
+            this.btnjsonread.TabIndex = 17;
+            this.btnjsonread.Text = "Json Read";
+            this.btnjsonread.UseVisualStyleBackColor = true;
             // 
             // Form7
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button10);
-            this.Controls.Add(this.button9);
-            this.Controls.Add(this.button8);
-            this.Controls.Add(this.button7);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnjsonread);
+            this.Controls.Add(this.btnjsonwrite);
+            this.Controls.Add(this.btnSoapead);
+            this.Controls.Add(this.btnSoapWrite);
+            this.Controls.Add(this.btnXmlread);
+            this.Controls.Add(this.btnXmlwrite);
+            this.Controls.Add(this.btnbinarywrite);
+            this.Controls.Add(this.btnbinaryread);
+            this.Controls.Add(this.btnread);
+            this.Controls.Add(this.btnWrite);
             this.Controls.Add(this.txtprice);
             this.Controls.Add(this.txtauthornm);
             this.Controls.Add(this.txtbook);
             this.Controls.Add(this.txtid);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.price);
+            this.Controls.Add(this.authorname);
+            this.Controls.Add(this.bookname);
+            this.Controls.Add(this.bookid);
             this.Name = "Form7";
             this.Text = "Form7";
             this.ResumeLayout(false);
@@ -235,23 +241,23 @@ namespace WindowsApplication
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label bookid;
+        private System.Windows.Forms.Label bookname;
+        private System.Windows.Forms.Label authorname;
+        private System.Windows.Forms.Label price;
         private System.Windows.Forms.TextBox txtid;
         private System.Windows.Forms.TextBox txtbook;
         private System.Windows.Forms.TextBox txtauthornm;
         private System.Windows.Forms.TextBox txtprice;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Button btnWrite;
+        private System.Windows.Forms.Button btnread;
+        private System.Windows.Forms.Button btnbinaryread;
+        private System.Windows.Forms.Button btnbinarywrite;
+        private System.Windows.Forms.Button btnXmlwrite;
+        private System.Windows.Forms.Button btnXmlread;
+        private System.Windows.Forms.Button btnSoapWrite;
+        private System.Windows.Forms.Button btnSoapead;
+        private System.Windows.Forms.Button btnjsonwrite;
+        private System.Windows.Forms.Button btnjsonread;
     }
 }

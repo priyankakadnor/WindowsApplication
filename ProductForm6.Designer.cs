@@ -1,7 +1,7 @@
 ﻿
 namespace WindowsApplication
 {
-    partial class Form6
+    partial class ProductForm6
     {
         /// <summary>
         /// Required designer variable.
@@ -161,6 +161,7 @@ namespace WindowsApplication
             this.btnXmlwrite.TabIndex = 12;
             this.btnXmlwrite.Text = "Xml Write";
             this.btnXmlwrite.UseVisualStyleBackColor = true;
+            this.btnXmlwrite.Click += new System.EventHandler(this.btnXmlwrite_Click);
             // 
             // btnXmlread
             // 
@@ -170,6 +171,7 @@ namespace WindowsApplication
             this.btnXmlread.TabIndex = 13;
             this.btnXmlread.Text = "Xml Read";
             this.btnXmlread.UseVisualStyleBackColor = true;
+            this.btnXmlread.Click += new System.EventHandler(this.btnXmlread_Click);
             // 
             // btnsoapwrite
             // 
@@ -189,6 +191,7 @@ namespace WindowsApplication
             this.btnsoapread.TabIndex = 15;
             this.btnsoapread.Text = "Soap Read";
             this.btnsoapread.UseVisualStyleBackColor = true;
+            this.btnsoapread.Click += new System.EventHandler(this.btnsoapread_Click);
             // 
             // btnJsonwrite
             // 
@@ -198,6 +201,7 @@ namespace WindowsApplication
             this.btnJsonwrite.TabIndex = 16;
             this.btnJsonwrite.Text = "Json Write";
             this.btnJsonwrite.UseVisualStyleBackColor = true;
+            this.btnJsonwrite.Click += new System.EventHandler(this.btnJsonwrite_Click);
             // 
             // btnJsonread
             // 
@@ -207,6 +211,7 @@ namespace WindowsApplication
             this.btnJsonread.TabIndex = 17;
             this.btnJsonread.Text = "Json Read";
             this.btnJsonread.UseVisualStyleBackColor = true;
+            this.btnJsonread.Click += new System.EventHandler(this.btnJsonread_Click);
             // 
             // Form6
             // 
@@ -233,6 +238,7 @@ namespace WindowsApplication
             this.Controls.Add(this.label1);
             this.Name = "Form6";
             this.Text = "Form6";
+            this.Load += new System.EventHandler(this.Form6_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

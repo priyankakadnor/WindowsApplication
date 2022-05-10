@@ -45,8 +45,8 @@ namespace WindowsApplication
             this.btnXmlRead = new System.Windows.Forms.Button();
             this.BtnJsonWrite = new System.Windows.Forms.Button();
             this.BtnJsonRead = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnSoapwrite = new System.Windows.Forms.Button();
+            this.btnsoapread = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -136,6 +136,7 @@ namespace WindowsApplication
             this.filebtn.TabIndex = 9;
             this.filebtn.Text = "Create File";
             this.filebtn.UseVisualStyleBackColor = true;
+            this.filebtn.Click += new System.EventHandler(this.filebtn_Click);
             // 
             // binarybtn
             // 
@@ -197,31 +198,33 @@ namespace WindowsApplication
             this.BtnJsonRead.UseVisualStyleBackColor = true;
             this.BtnJsonRead.Click += new System.EventHandler(this.BtnJsonRead_Click);
             // 
-            // button1
+            // btnSoapwrite
             // 
-            this.button1.Location = new System.Drawing.Point(236, 325);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 17;
-            this.button1.Text = "Soap Write";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnSoapwrite.Location = new System.Drawing.Point(236, 325);
+            this.btnSoapwrite.Name = "btnSoapwrite";
+            this.btnSoapwrite.Size = new System.Drawing.Size(75, 23);
+            this.btnSoapwrite.TabIndex = 17;
+            this.btnSoapwrite.Text = "Soap Write";
+            this.btnSoapwrite.UseVisualStyleBackColor = true;
+            this.btnSoapwrite.Click += new System.EventHandler(this.btnSoapwrite_Click);
             // 
-            // button2
+            // btnsoapread
             // 
-            this.button2.Location = new System.Drawing.Point(390, 325);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 18;
-            this.button2.Text = "Soap Read";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnsoapread.Location = new System.Drawing.Point(390, 325);
+            this.btnsoapread.Name = "btnsoapread";
+            this.btnsoapread.Size = new System.Drawing.Size(75, 23);
+            this.btnsoapread.TabIndex = 18;
+            this.btnsoapread.Text = "Soap Read";
+            this.btnsoapread.UseVisualStyleBackColor = true;
+            this.btnsoapread.Click += new System.EventHandler(this.btnsoapread_Click);
             // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnsoapread);
+            this.Controls.Add(this.btnSoapwrite);
             this.Controls.Add(this.BtnJsonRead);
             this.Controls.Add(this.BtnJsonWrite);
             this.Controls.Add(this.btnXmlRead);
@@ -264,7 +267,7 @@ namespace WindowsApplication
         private System.Windows.Forms.Button btnXmlRead;
         private System.Windows.Forms.Button BtnJsonWrite;
         private System.Windows.Forms.Button BtnJsonRead;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnSoapwrite;
+        private System.Windows.Forms.Button btnsoapread;
     }
 }
