@@ -135,6 +135,7 @@ namespace WindowsApplication
             this.btnwrite.TabIndex = 10;
             this.btnwrite.Text = "Write Form";
             this.btnwrite.UseVisualStyleBackColor = true;
+            this.btnwrite.Click += new System.EventHandler(this.btnwrite_Click);
             // 
             // button2
             // 

@@ -1,7 +1,7 @@
 ﻿
 namespace WindowsApplication
 {
-    partial class Form7
+    partial class BookForm7
     {
         /// <summary>
         /// Required designer variable.
@@ -171,6 +171,7 @@ namespace WindowsApplication
             this.btnXmlread.TabIndex = 13;
             this.btnXmlread.Text = "Xml Read";
             this.btnXmlread.UseVisualStyleBackColor = true;
+            this.btnXmlread.Click += new System.EventHandler(this.btnXmlread_Click);
             // 
             // btnSoapWrite
             // 
@@ -180,6 +181,7 @@ namespace WindowsApplication
             this.btnSoapWrite.TabIndex = 14;
             this.btnSoapWrite.Text = "Soap Write";
             this.btnSoapWrite.UseVisualStyleBackColor = true;
+            this.btnSoapWrite.Click += new System.EventHandler(this.btnSoapWrite_Click);
             // 
             // btnSoapead
             // 
@@ -189,6 +191,7 @@ namespace WindowsApplication
             this.btnSoapead.TabIndex = 15;
             this.btnSoapead.Text = "Soap Read";
             this.btnSoapead.UseVisualStyleBackColor = true;
+            this.btnSoapead.Click += new System.EventHandler(this.btnSoapead_Click);
             // 
             // btnjsonwrite
             // 
@@ -208,8 +211,9 @@ namespace WindowsApplication
             this.btnjsonread.TabIndex = 17;
             this.btnjsonread.Text = "Json Read";
             this.btnjsonread.UseVisualStyleBackColor = true;
+            this.btnjsonread.Click += new System.EventHandler(this.btnjsonread_Click);
             // 
-            // Form7
+            // BookForm7
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -232,8 +236,8 @@ namespace WindowsApplication
             this.Controls.Add(this.authorname);
             this.Controls.Add(this.bookname);
             this.Controls.Add(this.bookid);
-            this.Name = "Form7";
-            this.Text = "Form7";
+            this.Name = "BookForm7";
+            this.Text = "BOOK DETAILS";
             this.ResumeLayout(false);
             this.PerformLayout();
 
